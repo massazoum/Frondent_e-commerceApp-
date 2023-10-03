@@ -1,7 +1,21 @@
-.product_list {
+.Title {
+  text-align: center;
+  font-weight: bolder;
+  font-family: 'poppins', sans-serif;
+}
+
+.container_product_list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+}
+
+.product_list {
+  display: grid;
+  grid-template-columns: repeat( 3 , 320px);
+  /* flex-wrap: wrap; */
+  gap: 40px;
   padding: 20px;
 }
 
