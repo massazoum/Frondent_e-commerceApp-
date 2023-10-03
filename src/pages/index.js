@@ -1,8 +1,9 @@
 import React,{useState} from "react";
 import { useEffect } from "react";
 
-// import groceryProducts from "@/data/products";
+import Footer from "@/components/Footer";
 
+// import groceryProducts from "@/data/products";
 function Home(){
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
@@ -26,7 +27,7 @@ function Home(){
   }, []);
 
   const [searchTerm, setSearchTerm] = useState("");
-  
+
  const addToCart = (product)=> {
   const existingCart = JSON.parse(localStorage.getItem("cart"))||[];
 
@@ -34,8 +35,6 @@ function Home(){
 
   localStorage.setItem("cart", JSON.stringify(existingCart));
  }
-
-
 
  const [showModal , setShowModal]=useState(false);
  const [selectedProduct , setSelectedProduct] = useState(null);
@@ -98,6 +97,8 @@ function Home(){
    </div>
  </div>
 )}
+
+<Footer/>
 </div>
 
 );
