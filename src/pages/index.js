@@ -26,6 +26,7 @@ function Home(){
   }, []);
 
   const [searchTerm, setSearchTerm] = useState("");
+  
  const addToCart = (product)=> {
   const existingCart = JSON.parse(localStorage.getItem("cart"))||[];
 
@@ -70,8 +71,12 @@ function Home(){
 {
  filteredProducts.map((product)=>(
   <div key={product.id} className="product-card"> 
+  <div className="Container_img">
+  <img src={product.image} alt=""></img>
+  </div>
    <h2>{product.name}</h2>
    <p>{product.description}</p>
+
    <button onClick={() => openModal(product)}>View Details</button>
    <button onClick={() => addToCart(product)}>Add to Cart</button>
    </div>
@@ -83,6 +88,9 @@ function Home(){
 {showModal && (
  <div className="modal">
    <div className="modal-content">
+   <div className="Container_img">
+  <img src={selectedProduct.image} alt=""></img>
+  </div>
      <h2>{selectedProduct.name}</h2>
      <p>${selectedProduct.price}</p>
      <p>{selectedProduct.description}</p>
