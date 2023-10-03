@@ -1,8 +1,30 @@
 import React,{useState} from "react";
+import { useEffect } from "react";
 
-import groceryProducts from "@/data/products";
+// import groceryProducts from "@/data/products";
 
 function Home(){
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        const response = await fetch('http://localhost:3001/api/products');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setProducts(data);
+      } catch (err) {
+        console.error(err);
+        setError('Error fetching products. Please try again later.');
+      }
+    }
+
+    fetchProducts();
+  }, []);
+
  const addToCart = (product)=> {
   const existingCart = JSON.parse(localStorage.getItem("cart"))||[];
 
@@ -30,7 +52,7 @@ function Home(){
    <h1>Grocery Proucts</h1>
   <div className="product_list"> 
 {
- groceryProducts.map((product)=>(
+ products.map((product)=>(
   <div key={product.id} className="product-card"> 
    <h2>{product.name}</h2>
    <p>{product.description}</p>
@@ -38,7 +60,6 @@ function Home(){
    <button onClick={() => addToCart(product)}>Add to Cart</button>
    </div>
  ))}
-
 
   </div>
 
