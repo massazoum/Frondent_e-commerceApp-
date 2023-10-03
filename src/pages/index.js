@@ -10,7 +10,7 @@ function Home(){
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch('http://localhost:3001/api/products');
+        const response = await fetch('http://localhost:3001/api/groceryProducts');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -25,6 +25,7 @@ function Home(){
     fetchProducts();
   }, []);
 
+  const [searchTerm, setSearchTerm] = useState("");
  const addToCart = (product)=> {
   const existingCart = JSON.parse(localStorage.getItem("cart"))||[];
 
@@ -47,12 +48,27 @@ function Home(){
   setSelectedProduct(null);
   setShowModal(false);
  }
+
+ // Function to filter products based on the search term
+ const filteredProducts = products.filter((product) =>
+ product.name.toLowerCase().includes(searchTerm.toLowerCase())
+);
+
  return(
-  <div>
-   <h1>Grocery Proucts</h1>
+  <div className="mainDiv">
+   <h1 className="Title">Grocery Proucts</h1>
+   <div className="container_product_list">
+   <input
+        type="text"
+        placeholder="Search products"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+       </div>
+      <div className="container_product_list"> 
   <div className="product_list"> 
 {
- products.map((product)=>(
+ filteredProducts.map((product)=>(
   <div key={product.id} className="product-card"> 
    <h2>{product.name}</h2>
    <p>{product.description}</p>
@@ -60,7 +76,7 @@ function Home(){
    <button onClick={() => addToCart(product)}>Add to Cart</button>
    </div>
  ))}
-
+ </div>
   </div>
 
   
