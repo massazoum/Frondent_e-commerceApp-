@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { useEffect } from "react";
-
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 // import groceryProducts from "@/data/products";
 function Home(){
@@ -55,7 +55,9 @@ function Home(){
 );
 
  return(
+
   <div className="mainDiv">
+    <Header/>
    <h1 className="Title">Grocery Proucts</h1>
    <div className="container_product_list">
    <input
@@ -100,7 +102,6 @@ function Home(){
 
 <Footer/>
 </div>
-
 );
 }
 

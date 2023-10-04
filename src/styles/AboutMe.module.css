@@ -1,0 +1,33 @@
+.aboutMe {
+ width: 100vw;
+ height:80vh;
+ padding-top: 20px;
+margin: 0;
+}
+
+.container {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ padding: 0 1rem;
+}
+
+.imageContainer {
+ flex: 1;
+ max-width: 300px;
+}
+
+.profileImage {
+ max-width: 100%;
+ border-radius: 50%;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ max-height: 400px;
+}
+
+.textContainer {
+ flex: 2;
+ padding: 0 1rem;
+}
