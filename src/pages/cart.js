@@ -14,7 +14,7 @@ const Cart = () => {
     <div>
       <Header/>
       <h1>Your Cart</h1>
-      <ul>
+      <div className="product_list"> 
         {cartItems.map((item, index) => (
 <div key={index} className="product-card"> 
 <div className="Container_img">
@@ -24,7 +24,7 @@ const Cart = () => {
  <p>{item.description}</p>
  </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

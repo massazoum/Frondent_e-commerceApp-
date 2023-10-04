@@ -11,7 +11,7 @@ function Home(){
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch('http://localhost:3001/api/groceryProducts');
+        const response = await fetch('https://massa-zoumanigui.onrender.com');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
