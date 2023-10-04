@@ -58,9 +58,7 @@ A web application with Next JS that allows users to see grocery-product list and
 ### Key Features <a name="key-features"></a>
 
 - Implement a RESTful API to handle CRUD operations for grocery-products.
-- Store task data persistently (in PostgreSQL/MySQL database).
-- Ensure proper error handling and validation.
-- Deploy the application to a hosting platform of your choice. (Heroku/Vercel/Netlify)
+- Deploy the application to a hosting platform of your choice.
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -91,7 +89,7 @@ This website has been completed and deployed
 ### Deployment
 
   The changes will be deployed to the website through our standard deployment process.
-- [PortFolio](https://massazoum.github.io/PRT)
+- [Grocery_app](https://stupendous-kulfi-2d578f.netlify.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
