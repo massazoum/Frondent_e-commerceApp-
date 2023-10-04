@@ -19,10 +19,10 @@ function Footer() {
           </div>
           <div className="footer-social">
             {/* Social media icons */}
-            <a href="https://twitter.com/zoumaniguimass1" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter icon"></i></a>
-       <a href="https://www.facebook.com/massa.zoumanigui.96" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook icon"></i></a>
-        <a href="https://github.com/massazoum" target="_blank" rel="noopener noreferrer"><i class="fab fa-github icon" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/zoumtechmassa" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin icon" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/zoumaniguimass1" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter icon"></i></a>
+       <a href="https://www.facebook.com/massa.zoumanigui.96" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook icon"></i></a>
+        <a href="https://github.com/massazoum" target="_blank" rel="noopener noreferrer"><i className="fab fa-github icon" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/zoumtechmassa" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin icon" aria-hidden="true"></i></a>
           </div>
         </div>
         <div className="footer-bottom">
