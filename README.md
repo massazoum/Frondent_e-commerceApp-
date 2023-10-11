@@ -25,8 +25,6 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
-
 # 📖 Grocery_app <a name="about-project"></a>
 
 A web application with Next JS that allows users to see grocery-product list and add to their shopping cart.
